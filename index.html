@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voucher WiFi SOF7z</title>
+
+    <!-- <link rel="shortcut icon" href="<?= base_url('assets/images-favicon/favicon.ico'); ?>" type="image/x-icon"> -->
+    <link rel="icon" type="image/png" href="img/favicon.png?v=2" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css?v=5" />
+
+    <!-- Material Design Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.materialdesignicons.com/7.4.47/css/materialdesignicons.min.css"
+    />
+
+    <script></script>
+  </head>
+
+  <body data-theme="dark">
+    <!-- Background orbs -->
+    <div class="bg-orb"></div>
+    <div class="bg-orb"></div>
+
+    <div class="app-shell">
+      <div class="app-header">
+        <div class="brand">
+          <!-- <div class="brand-logo">
+                    <i class="mdi mdi-wifi"></i>
+                </div> -->
+          <img
+            src="<?= base_url('assets/images-favicon/favicon.png'); ?>"
+            alt="Logo"
+            style="width: 32px; height: 32px; object-fit: contain"
+          />
+          <div class="brand-text">
+            <span class="brand-name">SOF7z Hotspot</span>
+            <span class="brand-sub">Portal Voucher • Unlimited Nongkrong</span>
+          </div>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle">
+          <i class="mdi mdi-weather-night" id="themeIcon"></i>
+          <span id="themeText">Dark mode</span>
+        </button>
+      </div>
+
+      <div class="app-card" id="cardMain">
+        <!-- LEFT: LOGIN -->
+        <div class="left-pane" id="leftPane">
+          <div class="left-title">
+            <i class="mdi mdi-lock-check-outline"></i>
+            <span>Login Voucher WiFi</span>
+          </div>
+          <div class="left-subtitle">
+            Masukkan <b>username</b> dan <b>password</b> voucher yang kamu beli
+            untuk mulai internetan.
+          </div>
+
+          <div class="badge-speed">
+            <div class="badge-icon">
+              <i class="mdi mdi-speedometer"></i>
+            </div>
+            Up to 15 Mbps • Stabil buat streaming & lagi nyantai
+          </div>
+
+          <form id="loginForm" autocomplete="off">
+            <div class="form-field">
+              <div class="form-label">
+                <i class="mdi mdi-account-key-outline"></i>
+                Username Voucher
+              </div>
+              <div class="form-input-wrap">
+                <i class="mdi mdi-account field-icon"></i>
+                <input
+                  type="text"
+                  id="username"
+                  class="form-input"
+                  placeholder="Contoh: WIFI12345"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <div class="form-label">
+                <i class="mdi mdi-shield-key-outline"></i>
+                Password Voucher
+              </div>
+              <div class="form-input-wrap">
+                <i class="mdi mdi-lock field-icon"></i>
+                <input
+                  type="password"
+                  id="password"
+                  class="form-input"
+                  placeholder="Masukkan password voucher"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="helper-text">
+              ⚠️ Satu voucher umumnya hanya bisa digunakan di
+              <b>1 perangkat</b> (kecuali tertulis sebaliknya).
+            </div>
+
+            <button type="submit" class="btn-primary" id="btnLogin">
+              <span
+                ><i class="mdi mdi-login-variant"></i> Mulai Internetan</span
+              >
+            </button>
+          </form>
+
+          <div class="login-note">
+            <span class="status-dot"></span>
+            <span>Internet online • Hub : 0895806614419</span>
+          </div>
+        </div>
+
+        <!-- RIGHT: PRICE & QR -->
+        <div class="right-pane">
+          <div class="right-title">
+            <div>
+              <div class="right-title-main">
+                <i class="mdi mdi-ticket-confirmation-outline"></i>
+                Paket Voucher
+                <a
+                  href="<?= base_url('paket_list') ?>"
+                  class="pill-paket-desktop"
+                >
+                  <i class="mdi mdi-ticket-confirmation-outline"></i>
+                  Daftar Paket
+                </a>
+              </div>
+              <div class="right-title-sub">
+                Pilih paket sesuai kebutuhan kamu. Cocok buat nugas, gaming, dan
+                rebahan.
+              </div>
+            </div>
+            <div class="pill">
+              <i class="mdi mdi-lightning-bolt-outline"></i>
+              Auto generate voucher
+            </div>
+          </div>
+
+          <div class="price-grid">
+            <div class="price-card">
+              <div class="price-name">
+                <i class="mdi mdi-clock" style="color: #22c55e"></i> Paket Hemat
+                1 Jam
+              </div>
+              <div class="price-meta">
+                Cocok buat cek sosmed cepat & kirim file.
+              </div>
+              <div class="price-amount">Rp 3.000</div>
+              <div class="chip-speed">
+                <i class="mdi mdi-wifi"></i> Up to 5 Mbps• Unlimited
+              </div>
+            </div>
+
+            <div class="price-card">
+              <div class="price-name">
+                <i class="mdi mdi-clock" style="color: #ff4500"></i> Paket 6 Jam
+              </div>
+              <div class="price-meta">
+                Nugas santai, streaming, dan gaming ringan.
+              </div>
+              <div class="price-amount">Rp 8.000</div>
+              <div class="chip-speed">
+                <i class="mdi mdi-wifi"></i> Up to 7 Mbps • Unlimited
+              </div>
+            </div>
+
+            <div class="price-card">
+              <div class="price-name">
+                <i
+                  class="mdi mdi-white-balance-sunny"
+                  style="color: #ffff00"
+                ></i>
+                Paket Harian (1 Hari)
+              </div>
+              <div class="price-meta">
+                Full seharian, cocok buat kerja remote.
+              </div>
+              <div class="price-amount">Rp 10.000</div>
+              <div class="chip-speed">
+                <i class="mdi mdi-wifi"></i> Up to 10 Mbps • Unlimited
+              </div>
+            </div>
+
+            <div class="price-card">
+              <div class="price-name">
+                <i class="mdi mdi-calendar-week" style="color: #4ade80"></i>
+                Mingguan Basic
+              </div>
+              <div class="price-meta">
+                Nginep, marathon film, atau push rank.
+              </div>
+              <div class="price-amount">Rp 25.000</div>
+              <div class="chip-speed">
+                <i class="mdi mdi-wifi"></i> Up to 10 Mbps • Unlimited
+              </div>
+            </div>
+
+            <div class="price-card" style="grid-column: 1 / -1">
+              <div class="price-name">
+                <i
+                  class="mdi mdi-moon-waning-crescent"
+                  style="color: #00ffff"
+                ></i>
+                Paket Malam (20:00 – 06:00)
+              </div>
+              <div class="price-meta">
+                Khusus begadang, download & streaming lebih lega.
+              </div>
+              <div class="price-amount">Rp 5.000</div>
+              <div class="chip-speed">
+                <i class="mdi mdi-weather-night"></i> Up to 8 Mbps • Unlimited
+              </div>
+            </div>
+
+            <a href="<?= base_url('paket_list') ?>" class="btn-paket-mobile">
+              <i class="mdi mdi-ticket-confirmation-outline"></i>
+              Daftar Paket
+            </a>
+          </div>
+
+          <div class="qr-box">
+            <div class="qr-placeholder">
+              <i class="mdi mdi-qrcode-scan"></i>
+            </div>
+            <div>
+              <div class="qr-text-title">Scan untuk beli voucher baru</div>
+              <div class="qr-text-sub">
+                Arahkan kamera HP ke QR ini untuk ke halaman pembelian. Bisa
+                bayar via e-wallet / transfer.
+              </div>
+              <div class="qr-badges">
+                <div class="qr-badge">
+                  <i class="mdi mdi-credit-card-outline"></i> Transfer Bank
+                </div>
+                <div class="qr-badge">
+                  <i class="mdi mdi-cellphone-nfc"></i> E-Wallet
+                </div>
+                <div class="qr-badge">
+                  <i class="mdi mdi-shield-check"></i> Pembayaran aman
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Theme toggle (dark / light) + simpan di localStorage
+      const bodyEl = document.body;
+      const htmlEl = document.documentElement;
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+      const themeText = document.getElementById("themeText");
+
+      const savedTheme = localStorage.getItem("sof7z_theme");
+
+      if (savedTheme) {
+        htmlEl.setAttribute("data-theme", savedTheme);
+        bodyEl.setAttribute("data-theme", savedTheme);
+        updateThemeUI(savedTheme);
+      } else {
+        // DEFAULT MODE: DARK
+        htmlEl.setAttribute("data-theme", "dark");
+        bodyEl.setAttribute("data-theme", "dark");
+        updateThemeUI("dark");
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const current = htmlEl.getAttribute("data-theme") || "dark";
+        const nextTheme = current === "dark" ? "light" : "dark";
+
+        htmlEl.setAttribute("data-theme", nextTheme);
+        bodyEl.setAttribute("data-theme", nextTheme);
+        localStorage.setItem("sof7z_theme", nextTheme);
+
+        updateThemeUI(nextTheme);
+      });
+
+      function updateThemeUI(theme) {
+        if (theme === "dark") {
+          themeIcon.className = "mdi mdi-weather-night";
+          themeText.textContent = "Dark mode";
+        } else {
+          themeIcon.className = "mdi mdi-white-balance-sunny";
+          themeText.textContent = "Light mode";
+        }
+      }
+
+      // Login handler (nanti sambung ke API hotspot / CI3)
+      const loginForm = document.getElementById("loginForm");
+      const cardMain = document.getElementById("cardMain");
+      const btnLogin = document.getElementById("btnLogin");
+
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const user = document.getElementById("username").value.trim();
+        const pass = document.getElementById("password").value.trim();
+
+        if (!user || !pass) {
+          cardMain.classList.add("shake");
+          setTimeout(() => cardMain.classList.remove("shake"), 280);
+          return;
+        }
+
+        btnLogin.classList.add("ripple");
+        setTimeout(() => btnLogin.classList.remove("ripple"), 350);
+
+        alert(
+          "Login voucher diproses…\n\nUsername: " +
+            user +
+            "\n(tinggal sambungkan ke API Mikrotik / CI3)"
+        );
+      });
+    </script>
+  </body>
+</html>
